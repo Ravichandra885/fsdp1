@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz Exam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="exam-container">
+
+    <header class="exam-header">
+        <h2>Quiz Examination</h2>
+        <div class="timer-box">
+            Time Remaining: <span id="timer">15</span>s
+        </div>
+        <button class="logout-btn" onclick="logout()">
+    Logout
+</button>
+    </header>
+
+    <div class="exam-layout">
+
+        <main class="question-panel">
+            <div class="question-info">
+                <span id="question-number">Question 1</span>
+                <span id="progress">1 of 4</span>
+            </div>
+
+            <h3 id="question"></h3>
+
+            <p class="instruction">Select your answer:</p>
+
+            <div id="options"></div>
+
+            <div class="exam-actions">
+                <button id="previousBtn" onclick="previousQuestion()">
+                    Previous
+                </button>
+
+                <button onclick="nextQuestion()">
+                    Save &amp; Next
+                </button>
+
+                <button class="finish-btn" onclick="finishExam()">
+                    Finish Exam
+                </button>
+            </div>
+        </main>
+
+        <aside class="question-sidebar">
+            <h3>All Questions</h3>
+            <div id="question-palette" class="question-palette"></div>
+
+            <div class="legend">
+                <p><span class="legend-dot answered"></span> Answered</p>
+                <p><span class="legend-dot unanswered"></span> Not answered</p>
+                <p><span class="legend-dot current"></span> Current question</p>
+            </div>
+        </aside>
+
+    </div>
+
+    <div id="result-screen" class="result-screen" style="display:none">
+        <h2>Exam Completed!</h2>
+        <p id="result"></p>
+        <button onclick="restartExam()">Restart Exam</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

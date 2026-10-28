@@ -1,0 +1,268 @@
+
+/* Online exam page */
+
+/* Center the login and register pages */
+
+body:has(.auth-box) {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #dbeafe, #e9d5ff);
+    font-family: Arial, sans-serif;
+}
+
+.auth-box {
+    width: 400px;
+    max-width: 90%;
+    padding: 30px;
+    box-sizing: border-box;
+    background: white;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.auth-box input {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    box-sizing: border-box;
+}
+
+.auth-box button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 7px;
+    background: #304ffe;
+    color: white;
+    cursor: pointer;
+}
+
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #f1f5f9;
+    color: #263449;
+    font-family: Arial, sans-serif;
+    display: block;
+}
+
+.exam-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+.exam-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 22px;
+    background: #ffffff;
+    border: 1px solid #dbe3ee;
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+
+.exam-header h2 {
+    color: #2349a5;
+    margin: 0;
+}
+
+.timer-box {
+    background: #eaf1ff;
+    color: #2349a5;
+    padding: 12px;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.exam-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 250px;
+    gap: 16px;
+    align-items: start;
+}
+
+.question-panel,
+.question-sidebar,
+.result-screen {
+    background: #ffffff;
+    border: 1px solid #dbe3ee;
+    border-radius: 10px;
+    padding: 22px;
+}
+
+.question-info {
+    display: flex;
+    justify-content: space-between;
+    color: #2349a5;
+    font-weight: bold;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+#question {
+    font-size: 21px;
+    line-height: 1.5;
+    margin: 24px 0;
+}
+
+.instruction {
+    background: #eaf1ff;
+    padding: 10px;
+    color: #2349a5;
+    font-weight: bold;
+}
+
+#options {
+    display: grid;
+    gap: 12px;
+    margin: 18px 0 26px;
+}
+
+#options .option {
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+    text-align: left;
+    font-size: 16px;
+    background: #ffffff;
+    color: #263449;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+}
+
+#options .option:hover {
+    background: #f0f5ff;
+}
+
+#options .option.selected {
+    background: #dce8ff;
+    border: 2px solid #3563d9;
+}
+
+.exam-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 18px;
+}
+
+.exam-actions button,
+.result-screen button {
+    width: auto;
+    margin: 0;
+    padding: 11px 16px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.exam-actions .finish-btn {
+    background: #dc3545;
+    margin-left: auto;
+}
+
+.question-sidebar h3 {
+    margin-top: 0;
+    color: #2349a5;
+    font-size: 18px;
+}
+
+.question-palette {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 9px;
+}
+
+.question-number {
+    width: 100%;
+    aspect-ratio: 1;
+    margin: 0;
+    padding: 0;
+    background: #e8eef8;
+    color: #263449;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.question-number.answered {
+    background: #bcebd0;
+    border-color: #62bd8b;
+}
+
+.question-number.current {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+.legend {
+    margin-top: 25px;
+    padding-top: 12px;
+    border-top: 1px solid #e2e8f0;
+    font-size: 13px;
+}
+
+.legend p {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.legend-dot.answered {
+    background: #bcebd0;
+}
+
+.legend-dot.unanswered {
+    background: #e8eef8;
+}
+
+.legend-dot.current {
+    background: #2563eb;
+}
+
+.result-screen {
+    margin-top: 16px;
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+    .exam-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .exam-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .question-sidebar {
+        order: -1;
+    }
+
+    .question-palette {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+}

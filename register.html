@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App - Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="auth-box">
+        <h1>Quiz App</h1>
+        <h2>Create Account</h2>
+
+        <form id="registerForm">
+            <input type="text" id="regName"
+                   placeholder="Full name" required>
+
+            <input type="email" id="regEmail"
+                   placeholder="Email address" required>
+
+            <input type="password" id="regPassword"
+                   placeholder="Create password"
+                   minlength="6" required>
+
+            <button type="submit">Register</button>
+        </form>
+
+        <p id="registerMessage"></p>
+
+        <p>Already have an account?
+            <a href="index.html">Login here</a>
+        </p>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>
